@@ -50,6 +50,13 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
     return R * c;
 }
 
+function calculatePoints(distance) {
+    const maxPoints = 5000;
+    const decayRate = 0.0003;  // Quanto menor o valor, mais rápido os pontos decaem
+    const points = maxPoints * Math.exp(-decayRate * distance);
+    return Math.max(0, Math.floor(points));
+}
+
 document.getElementById('guess-btn').addEventListener('click', function() {
     if (userGuess && !guessMade) {
         const userLatLng = userGuess.getLatLng();  
@@ -57,7 +64,7 @@ document.getElementById('guess-btn').addEventListener('click', function() {
 
         const distance = calculateDistance(userLatLng.lat, userLatLng.lng, correctLocation.lat, correctLocation.lng);
 
-        let points = Math.max(0, Math.floor(5000 - distance));
+        let points = calculatePoints(distance);
         score += points;
 
         alert(`Distância: ${distance.toFixed(2)} km. Você ganhou ${points} pontos!`);
