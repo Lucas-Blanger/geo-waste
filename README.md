@@ -1,42 +1,34 @@
-# Geo Waste - Jogo de Adivinhação de Localização
+# Geo Waste - Location Guessing Game
 
-Este é um jogo de adivinhação onde o objetivo é identificar o local correto baseado em uma imagem exibida na tela. O jogador deve clicar em um ponto no mapa para fazer um palpite, e o jogo calcula a distância entre o local real e o palpite do jogador, atribuindo pontos com base na precisão do palpite.
+This is a guessing game where the goal is to identify the correct location based on an image displayed on the screen. The player must click on a point on the map to make a guess, and the game calculates the distance between the real location and the player's guess, awarding points based on the accuracy of the guess.
 
-## Como Jogar
+## How to Play
 
-1. O jogo exibirá uma imagem de um local.
-2. O jogador deve clicar no mapa no local onde acredita que a imagem foi tirada.
-3. Após fazer o palpite, o jogo calculará a distância entre o local real e o palpite do jogador.
-4. Pontos são calculados com base na precisão do palpite (quanto mais próximo, mais pontos).
-5. O jogador pode ver a pontuação acumulada ao longo do jogo.
+1. The game will display an image of a location.
+2. The player must click on the map where they believe the image was taken.
+3. After making the guess, the game will calculate the distance between the real location and the player's guess.
+4. Points are awarded based on the accuracy of the guess (the closer, the more points).
+5. The player can see their accumulated score throughout the game.
 
-## Instalação e Execução
 
-### Requisitos
-- Um navegador com suporte a JavaScript.
-- Conexão com a internet para carregar os mapas do OpenStreetMap.
-Funcionalidades
+### Features
+- Score based on the distance between the guess and the correct location, using an exponential decay system.
+- Display of an interactive map using OpenStreetMap.
+- Cumulative score throughout the game.
 
-    Pontuação baseada na distância do palpite ao local correto, com um sistema de decaimento exponencial.
-    Exibição de mapa interativo utilizando OpenStreetMap.
-    Pontuação acumulada ao longo do jogo.
+### Technologies Used
 
-### Tecnologias Utilizadas
+- **HTML5**: For the game structure.
+- **CSS3**: For styling the page.
+- **JavaScript**: For game logic and interaction with the map.
+- **Leaflet.js**: Interactive map library.
+- **OpenStreetMap**: Map data source.
 
-     HTML5: Para estrutura do jogo.
-     CSS3: Para estilização da página.
-     JavaScript: Para lógica do jogo e interação com o mapa.
-     Leaflet.js: Biblioteca de mapas interativos.
-     OpenStreetMap: Fonte de dados para os mapas.
 
-Contribuição
+# Author
 
-Sinta-se à vontade para abrir uma issue ou fazer um pull request com melhorias ou sugestões.
+**Name**: Lucas Blanger
 
-# Autor
+## License
 
-    Nome: Lucas Blanger
-
-Licença
-
-Este projeto é licenciado sob a MIT License.
+This project is licensed under the MIT License.
